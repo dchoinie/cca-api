@@ -1,0 +1,151 @@
+tags:
+- name: students
+  description: students API
+
+paths:
+# [GET] students
+  /students:
+    get:
+      tags:
+      - students
+      summary: Find All Students
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [POST] students
+    post:
+      tags:
+      - students
+      summary: Add Student
+      parameters:
+      - name: body
+        in: body
+        description: student Data
+        required: true
+        schema:
+          $ref: '#/definitions/students'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [GET] students/id
+  /students/{id}:
+    get:
+      tags:
+      - students
+      summary: Find Student By Id
+      parameters:
+      - name: id
+        in: path
+        description: Student Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] students/id
+    put:
+      tags:
+      - students
+      summary: Update Student By Id
+      parameters:
+      - name: id
+        in: path
+        description: student Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: student Data
+        required: true
+        schema:
+          $ref: '#/definitions/students'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [DELETE] students/id
+    delete:
+      tags:
+      - students
+      summary: Delete Student By Id
+      parameters:
+      - name: id
+        in: path
+        description: student Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# definitions
+definitions:
+  students:
+    type: object
+    required:
+        - email
+        - password
+        - age
+        - createdAt
+        - dateOfBirth
+        - email
+        - enrollmentStatus
+        - firstName
+        - id
+        - lastName
+        - phone
+    properties:
+      email:
+        type: string
+        description: student Email
+      password:
+        type: string
+        description: student Password
+      age:
+        type: number
+        description: student Age
+      createAt:
+        type: Date
+        description: creation date
+      dateOfBirth:
+        type: string
+        description: date of birth
+      enrollmentStatus:
+        type: string
+        description: enrollment status of student
+      firstName:
+        type: string
+        description: first name of student
+      lastName:
+        type: string
+        description: last name of student
+
+
+schemes:
+ - https
+ - http

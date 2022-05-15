@@ -1,0 +1,63 @@
+import { Student } from '@/interfaces/students.interface';
+
+// password: password
+const studentModel: Student[] = [
+  { 
+    age: 34,
+    createdAt: new Date(),
+    dateOfBirth: '1988-04-19',
+    email: 'example1@email.com', 
+    enrollmentStatus: "Full-Time Student",
+    firstName: 'Daniel',
+    id: 1, 
+    lastName: 'Choiniere',
+    middleName: 'Lee',
+    nickname: 'Dan',
+    password: '$2b$10$TBEfaCe1oo.2jfkBDWcj/usBj4oECsW2wOoDXpCa2IH9xqCpEK/hC',
+    phone: 6512082707,
+  },
+  { 
+    age: 34,
+    createdAt: new Date(),
+    dateOfBirth: '1988-04-19',
+    email: 'example2@email.com', 
+    enrollmentStatus: "Full-Time Student",
+    firstName: 'Daniel',
+    id: 2, 
+    lastName: 'Choiniere',
+    middleName: 'Lee',
+    nickname: 'Dan',
+    password: '$2b$10$TBEfaCe1oo.2jfkBDWcj/usBj4oECsW2wOoDXpCa2IH9xqCpEK/hC',
+    phone: 6512082707,
+  },
+  { 
+    age: 34,
+    createdAt: new Date(),
+    dateOfBirth: '1988-04-19',
+    email: 'example3@email.com', 
+    enrollmentStatus: "Full-Time Student",
+    firstName: 'Daniel',
+    id: 3, 
+    lastName: 'Choiniere',
+    middleName: 'Lee',
+    nickname: 'Dan',
+    password: '$2b$10$TBEfaCe1oo.2jfkBDWcj/usBj4oECsW2wOoDXpCa2IH9xqCpEK/hC',
+    phone: 6512082707,
+  },
+  { 
+    age: 34,
+    createdAt: new Date(),
+    dateOfBirth: '1988-04-19',
+    email: 'example4@email.com', 
+    enrollmentStatus: "Full-Time Student",
+    firstName: 'Daniel',
+    id: 4, 
+    lastName: 'Choiniere',
+    middleName: 'Lee',
+    nickname: 'Dan',
+    password: '$2b$10$TBEfaCe1oo.2jfkBDWcj/usBj4oECsW2wOoDXpCa2IH9xqCpEK/hC',
+    phone: 6512082707,
+  },
+];
+
+export default studentModel;

@@ -1,0 +1,27 @@
+# baseURL
+@baseURL = http://localhost:4000
+
+###
+# Student Signup
+POST {{ baseURL }}/signup
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Student Login
+POST {{ baseURL }}/login
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Student Logout
+POST {{ baseURL }}/logout
+Content-Type: application/json

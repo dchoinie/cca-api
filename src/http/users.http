@@ -1,0 +1,34 @@
+# baseURL
+@baseURL = http://localhost:4000
+
+###
+# Find All Students
+GET {{ baseURL }}/students
+
+###
+# Find Student By Id
+GET {{ baseURL }}/students/1
+
+###
+# Create Student
+POST {{ baseURL }}/students
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Modify Student By Id
+PUT {{ baseURL }}/students/1
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Delete Student By Id
+DELETE {{ baseURL }}/students/1
